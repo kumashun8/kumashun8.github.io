@@ -1,0 +1,31 @@
+name: copy publish/* from kumablog
+on:
+  repository_dispatch:
+    types: [target-updated]
+jobs:
+  copy-target:
+    name: copy publish/*
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: clone kumablog
+        uses: actions/checkout@v2
+        with:
+          repository: kumashun8/kumablog
+          path: kumablog
+          token: ${{ secrets.GITHUB_ACCESS_TOKEN }}
+      - name: copy publish/*
+        run: cp -rfp kumablog/publish/* ./
+      - name: clean kumablog
+        run: rm -rf kumablog
+      - name: create PR
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_ACCESS_TOKEN }}
+          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+          commit-message: '🎉 publish new pages'
+          branch: master
+          branch-suffix: timestamp
+          delete-branch: true
+          title: 'publish new pages'
