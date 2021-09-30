@@ -10,7 +10,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="https://kumashun8.github.io/" />
-<link crossorigin="anonymous" href="/assets/css/stylesheet.min.9f1d947375927e9847272b1f4e9be81336f539e513bf04d52cade31f81cad1af.css" integrity="sha256-nx2Uc3WSfphHJysfTpvoEzb1OeUTvwTVLK3jH4HK0a8=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.f2d575a68cd21a76cb2af99cec2a0f02e40497928e25fcffc58012f136b28277.css" integrity="sha256-8tV1pozSGnbLKvmc7CoPAuQEl5KOJfz/xYAS8Taygnc=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://kumashun8.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://kumashun8.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://kumashun8.github.io/favicon-32x32.png">
@@ -20,6 +20,11 @@
 <meta name="msapplication-TileColor" content="#2e2e33">
 <meta name="generator" content="Hugo 0.88.1" />
 <link rel="alternate" type="application/rss+xml" href="https://kumashun8.github.io/index.xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=M+PLUS+Rounded+1c&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+
 <noscript>
     <style>
         #theme-toggle,
@@ -145,10 +150,11 @@
 </div>
 <article class="first-entry home-info">
     <header class="entry-header">
-        <h1>Hi there wave</h1>
+        <h1>Without haste, but without rest. 👨‍💻</h1>
     </header>
     <section class="entry-content">
-        <p>Can be Info, links, about&hellip;</p>
+        <p>新卒で web アプリのインフラ周りをやっているひとの備忘録。<br>
+主に Go, k8s, DevOps のことをまとめていきたい。</p>
     </section>
     <footer class="entry-footer">
         <div class="social-icons">
@@ -167,26 +173,16 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Hello New
+    <h2>GitHub Actions の secrets でちょいハマり
     </h2>
   </header>
   <section class="entry-content">
-    <p>Hello everyone. My Name is kumashun.</p>
+    <p>https://zenn.dev/tak_iwamoto/articles/c4e8677f2a50af を参考に、リポジトリ A の特定ファイルへの push をトリガーにリポジトリ B に PR を作ろうとした。まずはリポジトリ A 側の GitHub Actions の workflow を以下のように準備した。
+name: dispatch target file updated on:/ push: branches: - master paths: - &#34;public/*&#34; jobs: dispatch-target-updated: strategy: matrix: repo: [&#34;kumashun8/kumashun8.github.io&#34;] name: dispatch-target-updated runs-on: ubuntu-latest steps: - name: dispatch target-updated uses: peter-evans/repository-dispatch@v1 with: # ここがおかしい? token: ${{ secrets.GITHUB_ACTIONS_TOKEN }} repository: ${{ matrix.repo }} event-type: target-updated 使用する secrets は Personal access tokens から発行済み。
+public/* の差分を master に push してみると、Actions は実行されるもののエラーになってしまう。...</p>
   </section>
-  <footer class="entry-footer">September 17, 2021</footer>
-  <a class="entry-link" aria-label="post link to Hello New" href="https://kumashun8.github.io/posts/hello-new/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Init Post
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>This is a sample post.</p>
-  </section>
-  <footer class="entry-footer">September 17, 2021</footer>
-  <a class="entry-link" aria-label="post link to Init Post" href="https://kumashun8.github.io/posts/init-post/"></a>
+  <footer class="entry-footer">September 19, 2021</footer>
+  <a class="entry-link" aria-label="post link to GitHub Actions の secrets でちょいハマり" href="https://kumashun8.github.io/posts/gha-repo-env-error/"></a>
 </article>
     </main>
     

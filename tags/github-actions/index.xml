@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>kumablog</title>
-    <link>https://kumashun8.github.io/</link>
-    <description>Recent content on kumablog</description>
+    <title>GitHub Actions on kumablog</title>
+    <link>https://kumashun8.github.io/tags/github-actions/</link>
+    <description>Recent content in GitHub Actions on kumablog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 19 Sep 2021 16:46:19 +0900</lastBuildDate><atom:link href="https://kumashun8.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Sep 2021 16:46:19 +0900</lastBuildDate><atom:link href="https://kumashun8.github.io/tags/github-actions/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GitHub Actions の secrets でちょいハマり</title>
       <link>https://kumashun8.github.io/posts/gha-repo-env-error/</link>
