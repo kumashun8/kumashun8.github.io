@@ -14,7 +14,7 @@ jobs:
         with:
           repository: kumashun8/kumablog
           path: kumablog
-          token: ${{ secrets.GITHUB_ACCESS_TOKEN }}
+          token: ${{ secrets.MY_GITHUB_ACCESS_TOKEN }}
       - name: copy publish/*
         run: cp -rfp kumablog/publish/* ./
       - name: clean kumablog
@@ -22,7 +22,7 @@ jobs:
       - name: create PR
         uses: peter-evans/create-pull-request@v3
         with:
-          token: ${{ secrets.GITHUB_ACCESS_TOKEN }}
+          token: ${{ secrets.MY_GITHUB_ACCESS_TOKEN }}
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           commit-message: '🎉 publish new pages'
           branch: master
