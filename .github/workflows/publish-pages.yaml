@@ -15,8 +15,8 @@ jobs:
           repository: kumashun8/kumablog
           path: kumablog
           token: ${{ secrets.MY_GITHUB_ACCESS_TOKEN }}
-      - name: ll
-        run: ll
+      - name: ls
+        run: ls
       - name: copy publish/*
         run: cp -rfp publish/* ./
       - name: clean kumablog
