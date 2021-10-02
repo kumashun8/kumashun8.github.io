@@ -16,7 +16,7 @@ jobs:
           path: kumablog
           token: ${{ secrets.MY_GITHUB_ACCESS_TOKEN }}
       - name: copy publish/*
-        run: cp -rfp kumablog/publish/* ./
+        run: cp -rfp publish/* ./
       - name: clean kumablog
         run: rm -rf kumablog
       - name: create PR
