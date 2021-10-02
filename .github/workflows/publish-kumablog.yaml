@@ -24,8 +24,8 @@ jobs:
           git config --local user.name ${{ env.GITHUB_USER_NAME }}
           git config --local user.email ${{ env.GITHUB_USER_MAIL }}
         env: |
-          GITHUB_USER_NAME: kumashun8
-          GITHUB_USER_MAIL: tiwo3wa4@gmail.com
+          GITHUB_USER_NAME: "kumashun8"
+          GITHUB_USER_MAIL: "tiwo3wa4@gmail.com"
       - name: commit files
         run: |
           git add .
