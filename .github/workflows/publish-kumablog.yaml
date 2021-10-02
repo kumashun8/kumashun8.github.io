@@ -1,10 +1,10 @@
-name: copy publish/* from kumablog
+name: publish kumablog/public/* to GitHub Pages
 on:
   repository_dispatch:
-    types: [target-updated]
+    types: [public-updated]
 jobs:
-  copy-target:
-    name: copy publish/*
+  publish-kumablog:
+    name: publish-kumablog
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -21,21 +21,14 @@ jobs:
         run: rm -rf kumablog
       - name: git config
         run: |
-          git config --local user.email "tiwo3wa4@gmail.com"
-          git config --local user.name "kumashun8"
+          git config --local user.name $GITHUB_USER_NAME
+          git config --local user.email $GITHUB_USER_MAIL
+        env: |
+          GITHUB_USER_NAME: kumashun8
+          GITHUB_USER_MAIL: tiwo3wa4@gmail.com
       - name: commit files
         run: |
           git add .
           git commit -m "publish new pages" -a
           git pull
           git push origin master
-      # - name: create PR
-      #   uses: peter-evans/create-pull-request@v3
-      #   with:
-      #     token: ${{ secrets.MY_GITHUB_ACCESS_TOKEN }}
-      #     author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
-      #     commit-message: '🎉 publish new pages'
-      #     branch: master
-      #     branch-suffix: timestamp
-      #     delete-branch: true
-      #     title: 'publish new pages'
