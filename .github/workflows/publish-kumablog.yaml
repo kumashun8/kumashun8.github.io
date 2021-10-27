@@ -17,6 +17,8 @@ jobs:
           token: ${{ secrets.MY_GITHUB_ACCESS_TOKEN }}
       - name: copy kumablog/public/*
         run: cp -rfp kumablog/public/* ./
+      - name: touch .nojekyll
+        run: touch .nojekyll
       - name: clean kumablog
         run: rm -rf kumablog
       - name: git config
