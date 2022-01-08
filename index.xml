@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0"
-  xmlns:atom="http://www.w3.org/2005/Atom"
-  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>kumablog</title>
     <link>https://kumashun8.github.io/</link>
     <description>Recent content on kumablog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 19 Sep 2021 16:46:19 +0900</lastBuildDate>
-    <atom:link href="https://kumashun8.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Sep 2021 16:46:19 +0900</lastBuildDate><atom:link href="https://kumashun8.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GitHub Actions の secrets でちょいハマり</title>
       <link>https://kumashun8.github.io/posts/gha-repo-env-error/</link>
       <pubDate>Sun, 19 Sep 2021 16:46:19 +0900</pubDate>
-
+      
       <guid>https://kumashun8.github.io/posts/gha-repo-env-error/</guid>
-      <description>https://zenn.dev/tak_iwamoto/articles/c4e8677f2a50af を参考に、リポジトリ A の特定ファイルへの push をトリガーにリポジトリ B に PR を作ろうとした。まずはリポジトリ A 側の GitHub Actions の workflow を以下のように準備した。...</description>
+      <description>https://zenn.dev/tak_iwamoto/articles/c4e8677f2a50af を参考に、リポジトリ A の特定ファイルへの push をトリガーにリポジトリ B に PR を作ろうとした。まずはリポジトリ A 側の GitHub Actions の workflow を以下のように準備した。
+name: dispatch target file updated on:/ push: branches: - master paths: - &amp;#34;public/*&amp;#34; jobs: dispatch-target-updated: strategy: matrix: repo: [&amp;#34;kumashun8/kumashun8.github.io&amp;#34;] name: dispatch-target-updated runs-on: ubuntu-latest steps: - name: dispatch target-updated uses: peter-evans/repository-dispatch@v1 with: # ここがおかしい? token: ${{ secrets.GITHUB_ACTIONS_TOKEN }} repository: ${{ matrix.repo }} event-type: target-updated 使用する secrets は Personal access tokens から発行済み。
+public/* の差分を master に push してみると、Actions は実行されるもののエラーになってしまう。</description>
     </item>
-
+    
   </channel>
 </rss>
