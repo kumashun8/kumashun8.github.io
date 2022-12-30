@@ -6,6 +6,12 @@
     <lastmod>2021-09-19T16:46:19+09:00</lastmod>
     <priority>0</priority>
   </url><url>
+    <loc>https://kumashun8.github.io/categories/</loc>
+    <lastmod>2021-09-19T16:46:19+09:00</lastmod>
+  </url><url>
+    <loc>https://kumashun8.github.io/categories/development/</loc>
+    <lastmod>2021-09-19T16:46:19+09:00</lastmod>
+  </url><url>
     <loc>https://kumashun8.github.io/tags/github/</loc>
     <lastmod>2021-09-19T16:46:19+09:00</lastmod>
   </url><url>
@@ -21,6 +27,6 @@
     <loc>https://kumashun8.github.io/tags/</loc>
     <lastmod>2021-09-19T16:46:19+09:00</lastmod>
   </url><url>
-    <loc>https://kumashun8.github.io/categories/</loc>
+    <loc>https://kumashun8.github.io/categories/ci/cd/</loc>
   </url>
 </urlset>
