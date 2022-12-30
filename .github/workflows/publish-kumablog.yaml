@@ -2,15 +2,17 @@ name: publish kumablog/public/* to GitHub Pages
 on:
   repository_dispatch:
     types: [public-updated]
+  workflow_dispatch:
+
 jobs:
   publish-kumablog:
     name: publish-kumablog
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: clone kumablog
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: kumashun8/kumablog
           path: kumablog
