@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>kumablog</title>
-    <link>https://kumashun8.github.io/</link>
-    <description>Recent content on kumablog</description>
+    <title>映画 on kumablog</title>
+    <link>https://kumashun8.github.io/categories/%E6%98%A0%E7%94%BB/</link>
+    <description>Recent content in 映画 on kumablog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Fri, 30 Dec 2022 18:11:59 +0900</lastBuildDate><atom:link href="https://kumashun8.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Dec 2022 18:11:59 +0900</lastBuildDate><atom:link href="https://kumashun8.github.io/categories/%E6%98%A0%E7%94%BB/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My Best Movies 2022</title>
       <link>https://kumashun8.github.io/posts/my-best-movies-2022/</link>
@@ -37,16 +37,6 @@ https://filmarks.com/users/kuma_ahoge
  filmarks
 サブスクといいながらTSUTAYAレンタルのキル・ビルが1位! 未だレンタルのみの名作が結構あるので、しばらくTSUTAYAにはお世話になりそう。タランティーノの日本愛が爆発した、最高にクールでクレイジーなアクション作。鑑賞後はBATTLE WITHOUT HONOR OR HUMANITYをずっと聴いてしまう。
 2位 tick, tick&amp;hellip;BOOM! 🎶 アメリカ, 2021</description>
-    </item>
-    
-    <item>
-      <title>GitHub Actions の secrets でちょいハマり</title>
-      <link>https://kumashun8.github.io/posts/gha-repo-env-error/</link>
-      <pubDate>Sun, 19 Sep 2021 16:46:19 +0900</pubDate>
-      
-      <guid>https://kumashun8.github.io/posts/gha-repo-env-error/</guid>
-      <description>https://zenn.dev/tak_iwamoto/articles/c4e8677f2a50af を参考に、リポジトリ A の特定ファイルへの push をトリガーにリポジトリ B に PR を作ろうとした。まずはリポジトリ A 側の GitHub Actions の workflow を以下のように準備した。
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22  name: dispatch target file updated on: push: branches: - master paths: - &amp;#34;public/*&amp;#34; jobs: dispatch-target-updated: strategy: matrix: repo: [&amp;#34;kumashun8/kumashun8.github.io&amp;#34;] name: dispatch-target-updated runs-on: ubuntu-latest steps: - name: dispatch target-updated uses: peter-evans/repository-dispatch@v1 with: # ここがおかしい?</description>
     </item>
     
   </channel>

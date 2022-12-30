@@ -6,7 +6,39 @@
     <description>Recent content in Posts on kumablog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 19 Sep 2021 16:46:19 +0900</lastBuildDate><atom:link href="https://kumashun8.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Dec 2022 18:11:59 +0900</lastBuildDate><atom:link href="https://kumashun8.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Best Movies 2022</title>
+      <link>https://kumashun8.github.io/posts/my-best-movies-2022/</link>
+      <pubDate>Fri, 30 Dec 2022 18:11:59 +0900</pubDate>
+      
+      <guid>https://kumashun8.github.io/posts/my-best-movies-2022/</guid>
+      <description>今年も映画館、サブスク問わずたくさんの映画を楽しむことができました。年間100本を目標にしていたのですが、惜しくも90本止まり。それでも月7本なのでかなり見た方でしょう。ということで、filmarksに記録しているスコアを参考にしつつ、今年のマイベストムービーTOP5を劇場公開、サブスク視聴に分けて共有します。
+https://filmarks.com/users/kuma_ahoge
+劇場公開 1位 トップガン マーヴェリック 🇺🇸 filmarks
+ 冒頭のシーンやテーマソングなど前作を踏襲するリスペクトがありつつ、クスッと笑える掛け合いが挟まるのが今っぽい。
+若い頃に心打たれた名作が、40年弱経ってこんな素晴らしい形で蘇ることを想像する。オッサンになったときの今作のような映画が出来上がるのがすごく楽しみだ！
+ 待望の続編が堂々の一位。「追いトップガン」現象が起こるほどリピート鑑賞した方も多いはず。40年経っても衰えない作品の魅力とトム・クルーズの役者魂にあっぱれ!!
+2位 RRR 🐅  永遠にアドレナリン全開！！！ 見てるこっちもなんだか無敵になった気がする、とんでもない熱量をもらえる映画。
+ filmarks
+ちゃんと見たインド映画としては初めてにして、ものすごいエネルギーをぶつけられました。展開は容易に想像がつくのですが、それを全力でやってくれるから盛り上がらないわけがない。「“ナートゥ”をご存知か？」
+3位 アバター：ウェイ・オブ・ウォーター 🌊  もはやアトラクション。
+ filmarks
+マーヴェリック同様に全世界で公開が待ち望まれた続編。ハイフレームレートIMAX3Dでの鑑賞は、映像体験として新次元でした。上映時間の3時間が意外とあっという間。
+4位 スパイダーマン：ノー・ウェイ・ホーム 🕷  ありがとうマーベル！！！！！
+ありがとうスパイダーマン！！！！
+ filmarks
+3人のスパイダーマンが夢の共演。終始多くの世代へのファンサービスという感じでした。本作以降も今年はMCU作品が続々スクリーンに戻ってきて、やっぱいいな〜となったり。
+5位 ブレット・トレイン 🚄  迫力満点ノンストップドタバタアクション
+ filmarks
+学生時代から好きな作家さんである伊坂幸太郎の小説がブラピ主演でハリウッド映画に!? 原作を読んでからドキドキして見たのですが、心配無用で楽しむことができました。原作のいいところをギュッと2時間少々にまとめつつ、映像映えする演出を足していくという、映画制作の難しさを知る機会になりました。
+サブスク視聴 1位 キル・ビル Vol.1 ⚔️ アメリカ, 2003
+ サムライ、ヤクザ、女子高生、イカしたジャパニーズカルチャーてんこ盛りのスカッとアクション超大作。
+ filmarks
+サブスクといいながらTSUTAYAレンタルのキル・ビルが1位! 未だレンタルのみの名作が結構あるので、しばらくTSUTAYAにはお世話になりそう。タランティーノの日本愛が爆発した、最高にクールでクレイジーなアクション作。鑑賞後はBATTLE WITHOUT HONOR OR HUMANITYをずっと聴いてしまう。
+2位 tick, tick&amp;hellip;BOOM! 🎶 アメリカ, 2021</description>
+    </item>
+    
     <item>
       <title>GitHub Actions の secrets でちょいハマり</title>
       <link>https://kumashun8.github.io/posts/gha-repo-env-error/</link>
@@ -14,8 +46,7 @@
       
       <guid>https://kumashun8.github.io/posts/gha-repo-env-error/</guid>
       <description>https://zenn.dev/tak_iwamoto/articles/c4e8677f2a50af を参考に、リポジトリ A の特定ファイルへの push をトリガーにリポジトリ B に PR を作ろうとした。まずはリポジトリ A 側の GitHub Actions の workflow を以下のように準備した。
-name: dispatch target file updated on:/ push: branches: - master paths: - &amp;#34;public/*&amp;#34; jobs: dispatch-target-updated: strategy: matrix: repo: [&amp;#34;kumashun8/kumashun8.github.io&amp;#34;] name: dispatch-target-updated runs-on: ubuntu-latest steps: - name: dispatch target-updated uses: peter-evans/repository-dispatch@v1 with: # ここがおかしい? token: ${{ secrets.GITHUB_ACTIONS_TOKEN }} repository: ${{ matrix.repo }} event-type: target-updated 使用する secrets は Personal access tokens から発行済み。
-public/* の差分を master に push してみると、Actions は実行されるもののエラーになってしまう。</description>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22  name: dispatch target file updated on: push: branches: - master paths: - &amp;#34;public/*&amp;#34; jobs: dispatch-target-updated: strategy: matrix: repo: [&amp;#34;kumashun8/kumashun8.github.io&amp;#34;] name: dispatch-target-updated runs-on: ubuntu-latest steps: - name: dispatch target-updated uses: peter-evans/repository-dispatch@v1 with: # ここがおかしい?</description>
     </item>
     
   </channel>

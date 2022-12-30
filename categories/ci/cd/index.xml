@@ -13,8 +13,7 @@
       
       <guid>https://kumashun8.github.io/posts/gha-repo-env-error/</guid>
       <description>https://zenn.dev/tak_iwamoto/articles/c4e8677f2a50af を参考に、リポジトリ A の特定ファイルへの push をトリガーにリポジトリ B に PR を作ろうとした。まずはリポジトリ A 側の GitHub Actions の workflow を以下のように準備した。
-name: dispatch target file updated on:/ push: branches: - master paths: - &amp;#34;public/*&amp;#34; jobs: dispatch-target-updated: strategy: matrix: repo: [&amp;#34;kumashun8/kumashun8.github.io&amp;#34;] name: dispatch-target-updated runs-on: ubuntu-latest steps: - name: dispatch target-updated uses: peter-evans/repository-dispatch@v1 with: # ここがおかしい? token: ${{ secrets.GITHUB_ACTIONS_TOKEN }} repository: ${{ matrix.repo }} event-type: target-updated 使用する secrets は Personal access tokens から発行済み。
-public/* の差分を master に push してみると、Actions は実行されるもののエラーになってしまう。</description>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22  name: dispatch target file updated on: push: branches: - master paths: - &amp;#34;public/*&amp;#34; jobs: dispatch-target-updated: strategy: matrix: repo: [&amp;#34;kumashun8/kumashun8.github.io&amp;#34;] name: dispatch-target-updated runs-on: ubuntu-latest steps: - name: dispatch target-updated uses: peter-evans/repository-dispatch@v1 with: # ここがおかしい?</description>
     </item>
     
   </channel>
